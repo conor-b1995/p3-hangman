@@ -1,5 +1,6 @@
 from words import random_words
 import time
+import random
 
 
 def start_screen():
@@ -45,4 +46,11 @@ def validate_name(name):
     return True
 
 
+def get_random_word(random_words):
+
+    word = random.choice(random_words)
+    return word.lower()
+
+
 start_screen()
+print(get_random_word(random_words))
