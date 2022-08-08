@@ -109,6 +109,12 @@ def main_game():
         print('You win :)')
 
 
-# start_screen()
-main_game()
+def main():
+    """
+    
+    """
+    start_screen()
+    main_game()
 
+
+main()
