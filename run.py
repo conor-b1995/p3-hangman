@@ -6,7 +6,7 @@ import random
 def start_screen():
     """
     This is the opening visual for the user.
-    It explains the rules and lets the user enter 
+    It explains the rules and lets the user enter
     there name. It also validates that the user entered
     only letters and not numbers into there name.
     """
@@ -46,11 +46,69 @@ def validate_name(name):
     return True
 
 
-def get_random_word(random_words):
+def get_random_word(random_word):
+    """
+    Generates a random word from the imported
+    list of random words.
+    """
 
     word = random.choice(random_words)
     return word.lower()
 
 
-start_screen()
-print(get_random_word(random_words))
+def main_game():
+    """
+    
+    """
+    lives = 6
+    guessed_letters = []
+    word = get_random_word(random_words)
+    letters_in_word = set(word)
+
+    while len(letters_in_word) > 0 and lives > 0:
+
+        display_answer_grid = [letter if letter in guessed_letters else '_' for letter in word]
+
+        # print('\nLetters guessed: ', ','.join(guessed_letters))
+        print(f'{lives} lives remaining !\n')
+        print('Current word: ', " ".join(display_answer_grid))
+        player_guess = input('Guess a letter: ').lower()
+        print('\n')
+
+        if player_guess in guessed_letters:
+            print(f'Sorry you have already guessed {player_guess}')
+            print('You have used these letters: ', ','.join(guessed_letters))
+
+        elif not player_guess.isalpha():
+            print(f'{player_guess} is not a letter. Only enter letters.')
+            print('You have used these letters: ', ','.join(guessed_letters))
+
+        elif len(player_guess) != 1:
+            print('You must only use one single letter !!')
+            print('You have used these letters: ', ','.join(guessed_letters))
+
+        elif player_guess not in word:
+            print(f'Please try again {player_guess} is not in the word')
+            lives -= 1
+            # print(f'{lives} lives remaining')
+            guessed_letters.append(player_guess)
+            print('You have used these letters: ', ','.join(guessed_letters))
+
+        else:
+            print(f'Good job! {player_guess} is in the word \n')
+            guessed_letters.append(player_guess)
+            print('You have used these letters: ', ','.join(guessed_letters))
+            if player_guess in letters_in_word:
+                letters_in_word.remove(player_guess)
+
+    if lives == 0:
+        print('Sorry you lost')
+        print(f'The word was {word}')
+    else:
+        print(f'The word was {word}')
+        print('You win :)')
+
+
+# start_screen()
+main_game()
+
