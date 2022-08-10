@@ -79,7 +79,7 @@ def menu():
             print('Invalid input please enter "1" or "2"')
 
 
-def get_random_word(random_word):
+def get_random_word():
     """
     Generates a random word from the imported
     list of random words.
@@ -99,7 +99,7 @@ def main_game():
     """
     lives = 6
     guessed_letters = []
-    word = get_random_word(random_words)
+    word = get_random_word()
     letters_in_word = set(word)
 
     while len(letters_in_word) > 0 and lives > 0:
