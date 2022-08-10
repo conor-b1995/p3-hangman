@@ -1,6 +1,6 @@
-from words import random_words
 import time
 import random
+from words import random_words
 
 
 def start_screen():
@@ -50,6 +50,8 @@ def validate_name(name):
 
 def instructions():
     """
+    Instructions so thr user can understand
+    how the game works.
     """
     print('The computer will generate a random word,\n\
 you then have 6 attempts to guess each letter correctly \n\
@@ -59,10 +61,11 @@ or else an innocent man dies !!\n')
 
 def menu():
     """
-    
+    This is the menu to give users options between
+    reading the intructions or playing the game.
     """
     print('1. Instructions\n2. Play Game\n')
-    
+
     while True:
         pick_number = input('Please select an option: \n')
 
@@ -88,7 +91,11 @@ def get_random_word(random_word):
 
 def main_game():
     """
-    
+    Main function to grab a random word from
+    get_random_word function which is then hidden
+    so the user cant see the random word. Takes user
+    input and validates it. Decrement user life when
+    the letter they guess isnt in the random word.
     """
     lives = 6
     guessed_letters = []
@@ -139,11 +146,12 @@ def main_game():
         print(f'The word was {word}')
         print('You win :)')
         exit()
-        
+
 
 def main():
     """
-    
+    Main function that takes in the
+    other functions to run the game.
     """
     start_screen()
     main_game()
