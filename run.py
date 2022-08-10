@@ -16,10 +16,10 @@ def start_screen():
     print('*' * 25)
     time.sleep(1)
 
-    print('The computer will generate a random word,\n\
-you then have 6 attempts to guess each letter correctly \n\
-or else an innocent man dies !!')
-    time.sleep(3)
+#     print('The computer will generate a random word,\n\
+# you then have 6 attempts to guess each letter correctly \n\
+# or else an innocent man dies !!')
+    # time.sleep(3)
 
     while True:
         name = input('\nPlease enter your first name here: ')
@@ -27,6 +27,8 @@ or else an innocent man dies !!')
         if validate_name(name):
             print(f'Good luck {name}')
             break
+
+    menu()
 
 
 def validate_name(name):
@@ -44,6 +46,34 @@ def validate_name(name):
         return False
 
     return True
+
+
+def instructions():
+    """
+    """
+    print('The computer will generate a random word,\n\
+you then have 6 attempts to guess each letter correctly \n\
+or else an innocent man dies !!\n')
+    menu()
+
+
+def menu():
+    """
+    
+    """
+    print('1. Instructions\n2. Play Game\n')
+    
+    while True:
+        pick_number = input('Please select an option: \n')
+
+        if pick_number == '1':
+            instructions()
+            break
+        elif pick_number == '2':
+            main_game()
+            break
+        else:
+            print('Invalid input please enter "1" or "2"')
 
 
 def get_random_word(random_word):
@@ -104,10 +134,12 @@ def main_game():
     if lives == 0:
         print('Sorry you lost')
         print(f'The word was {word}')
+        exit()
     else:
         print(f'The word was {word}')
         print('You win :)')
-
+        exit()
+        
 
 def main():
     """
