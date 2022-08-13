@@ -6,9 +6,9 @@ from words import random_words
 def start_screen():
     """
     This is the opening visual for the user.
-    It explains the rules and lets the user enter
-    there name. It also validates that the user entered
-    only letters and not numbers into there name.
+    It lets the user enter there name.
+    It also validates that the user has entered
+    only letters and no numbers into there name.
     """
 
     print('*' * 25)
@@ -53,9 +53,20 @@ def instructions():
     Instructions so thr user can understand
     how the game works.
     """
-    print('The computer will generate a random word,\n\
-you then have 6 attempts to guess each letter correctly \n\
-or else an innocent man dies !!\n')
+    print("\nThe computer will generate a random word,\n"
+          "you then have 6 lives to guess each letter correctly.\n"
+          "\nThe main objective of this game is to guess the word "
+          "\nby choosing the correct letters, one at a time.\n"
+          "\n1. To guess the word, type a letter of your choice "
+          "\nthen press the enter key. \n"
+          "\n2. If your selection is correct "
+          "\nthe letter will be displayed on the screen. \n"
+          "\n3. If the letter selected is wrong, the hangman figure "
+          "\nwill start to appear on the screen and you will lose a life. \n"
+          "\n4. You are given 6 lives before the game is over. \n"
+          "\n5. If you get stuck running the game please click on2 "
+          "\nRUN PROGRAM at the top of the screen, "
+          "to reset the game. \n\n")
     menu()
 
 
@@ -110,7 +121,7 @@ def main_game():
 
         # print('\nLetters guessed: ', ','.join(guessed_letters))
         print(hangman_figure(lives))
-        print(f'{lives} lives remaining !\n')
+        print(f'{lives} live(s) remaining !\n')
         print('Current word: ', " ".join(display_answer_grid))
         player_guess = input('\nGuess a letter: ').lower()
         print('\n')
