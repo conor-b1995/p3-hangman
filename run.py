@@ -144,12 +144,30 @@ def main_game():
     if lives == 0:
         print(hangman_figure(lives))
         print('Sorry you lost')
-        print(f'The word was {word}')
-        exit()
+        print(f'The word was {word}\n')
+        another_game()
     else:
-        print(f'The word was {word}')
         print('You win :)')
-        exit()
+        print(f'The word was {word}\n')
+        another_game()
+
+
+def another_game():
+    """
+    Gives the user the option to play
+    another game or to just exit the
+    game.
+    """
+    while True:
+        play_again = input('Would you like to play another game ?\
+    yes/no\n').lower()
+
+        if play_again == 'yes':
+            main_game()
+        elif play_again == 'no':
+            exit()
+        else:
+            print('Please make a valid choice !!')
 
 
 def hangman_figure(lives):
