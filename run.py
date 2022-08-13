@@ -25,7 +25,7 @@ def start_screen():
         name = input('\nPlease enter your first name here: ')
 
         if validate_name(name):
-            print(f'Good luck {name}')
+            print(f'Good luck {name}\n')
             break
 
     menu()
@@ -64,6 +64,7 @@ def menu():
     This is the menu to give users options between
     reading the intructions or playing the game.
     """
+    print('Main Menu')
     print('1. Instructions\n2. Play Game\n')
 
     while True:
@@ -104,12 +105,14 @@ def main_game():
 
     while len(letters_in_word) > 0 and lives > 0:
 
-        display_answer_grid = [letter if letter in guessed_letters else '_' for letter in word]
+        display_answer_grid = [
+            letter if letter in guessed_letters else '_' for letter in word]
 
         # print('\nLetters guessed: ', ','.join(guessed_letters))
+        print(hangman_figure(lives))
         print(f'{lives} lives remaining !\n')
         print('Current word: ', " ".join(display_answer_grid))
-        player_guess = input('Guess a letter: ').lower()
+        player_guess = input('\nGuess a letter: ').lower()
         print('\n')
 
         if player_guess in guessed_letters:
@@ -125,7 +128,7 @@ def main_game():
             print('You have used these letters: ', ','.join(guessed_letters))
 
         elif player_guess not in word:
-            print(f'Please try again {player_guess} is not in the word')
+            print(f'{player_guess} is not in the word')
             lives -= 1
             # print(f'{lives} lives remaining')
             guessed_letters.append(player_guess)
@@ -139,6 +142,7 @@ def main_game():
                 letters_in_word.remove(player_guess)
 
     if lives == 0:
+        print(hangman_figure(lives))
         print('Sorry you lost')
         print(f'The word was {word}')
         exit()
@@ -146,6 +150,88 @@ def main_game():
         print(f'The word was {word}')
         print('You win :)')
         exit()
+
+
+def hangman_figure(lives):
+    """
+    The different stages of hangman
+    depending on how many lives the
+    user has left.
+    """
+
+    steps = [  # sixth stage
+          """
+             --------
+             |      |
+             |      O
+             |     \\|/
+             |      |
+             |     / \\
+             -
+          """,
+          # fifth stage
+          """
+             --------
+             |      |
+             |      O
+             |     \\|/
+             |      |
+             |     /
+             -
+          """,
+          # fourth stage
+          """
+             --------
+             |      |
+             |      O
+             |     \\|/
+             |      |
+             |
+             -
+          """,
+          # third stage
+          """
+             --------
+             |      |
+             |      O
+             |     \\|
+             |      |
+             |
+             -
+          """,
+          # second stage
+          """
+             --------
+             |      |
+             |      O
+             |      |
+             |      |
+             |
+             -
+          """,
+          # first stage
+          """
+             --------
+             |      |
+             |      O
+             |
+             |
+             |
+             -
+          """,
+          # Initial stage
+          """
+             --------
+             |      |
+             |
+             |
+             |
+             |
+             -
+          """
+    ]
+
+    return steps[lives]
 
 
 def main():
