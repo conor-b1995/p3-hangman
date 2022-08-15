@@ -22,7 +22,7 @@ def start_screen():
     # time.sleep(3)
 
     while True:
-        name = input('\nPlease enter your first name here: ')
+        name = input('\nPlease enter your first name here: \n')
 
         if validate_name(name):
             print(f'Good luck {name}\n')
@@ -123,7 +123,7 @@ def main_game():
         print(hangman_figure(lives))
         print(f'{lives} live(s) remaining !\n')
         print('Current word: ', " ".join(display_answer_grid))
-        player_guess = input('\nGuess a letter: ').lower()
+        player_guess = input('\nGuess a letter: \n').lower()
         print('\n')
 
         if player_guess in guessed_letters:
