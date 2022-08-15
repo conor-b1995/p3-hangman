@@ -1,3 +1,4 @@
+import os
 import time
 import random
 from words import random_words
@@ -28,6 +29,8 @@ def start_screen():
             print(f'Good luck {name}\n')
             break
 
+    time.sleep(2)
+    clear()
     menu()
 
 
@@ -125,6 +128,8 @@ def main_game():
         print('Current word: ', " ".join(display_answer_grid))
         player_guess = input('\nGuess a letter: \n').lower()
         print('\n')
+
+        clear()
 
         if player_guess in guessed_letters:
             print(f'Sorry you have already guessed {player_guess}')
@@ -261,6 +266,13 @@ def hangman_figure(lives):
     ]
 
     return steps[lives]
+
+
+def clear():
+    """
+    Used to clear terminal of clutter.
+    """
+    os.system('clear')
 
 
 def main():
