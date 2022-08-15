@@ -21,26 +21,37 @@ My version of the game allows only one user at a time to play. The computer will
 * The user also enters the main game from the main menu by inputting the corresponding number. 
 (Menu image)
 ### Instructions
-* The instructions section clearlt outlines how the game works to the user.
-* The main menu comes up here again so the user can continue on to the main game.
+* The instructions section clearly outlines how the game works for the user.
+* The main menu comes up here again so the user can continue to the main game.
 (Instructions image)
 ### Main Game
 * In the main game the user will be able to see: 
     * The letter they have just selected and whether or not it is in the word.
     * All the previous letters they have used.
     * The stages of the hangman figure.
-    * How many lives they habe remaining.
+    * How many lives they have remaining.
     * The current word they are trying to guess.
     * The user will be given the option to play again after they have won or lost.
+    * Game will exit if the user selects 'no'.
 
 
 ### Future Features
-*
+* A possible future idea is to make it two player, so player one can type in any word of their choice the word will then be hidden and player two will have to guess the word.
+* Making the game different levels so a group of easy words, medium words and hard words to accommodate all skill levels. 
+* Adding a timer to the game to make it more difficult. 
 
 ## Testing
+* Throughout my project I used the gitpod terminal to run and test that each function was working correctly as I was creating the functions.
+* I got some of my friends to test the game to make sure the game was running smoothly. Although the game ran smoothly for them they found a lot of the words very tricky so I changed my list.
+* ### Validator testing
+    * I ran my code through the [PEP8 Validator](http://pep8online.com/) with no issues.
+(Validation image)
 
 ## Bugs
+* While doing the another_game function the else statement was just printing out an infinite amount of the string. This bug was fixed by surrounding it in a while loop.
 
 ## Deployment
+
+
 
 ## Credits
