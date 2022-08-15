@@ -67,7 +67,7 @@ def instructions():
           "\n3. If the letter selected is wrong, the hangman figure "
           "\nwill start to appear on the screen and you will lose a life. \n"
           "\n4. You are given 6 lives before the game is over. \n"
-          "\n5. If you get stuck running the game please click on2 "
+          "\n5. If you get stuck running the game please click on "
           "\nRUN PROGRAM at the top of the screen, "
           "to reset the game. \n\n")
     menu()
@@ -85,9 +85,11 @@ def menu():
         pick_number = input('Please select an option: \n')
 
         if pick_number == '1':
+            clear()
             instructions()
             break
         elif pick_number == '2':
+            clear()
             main_game()
             break
         else:
@@ -181,6 +183,7 @@ def another_game():
         if play_again == 'yes':
             main_game()
         elif play_again == 'no':
+            print('Game over ! Press "Run Program" if you want to play again')
             exit()
         else:
             print('Please make a valid choice !!')
