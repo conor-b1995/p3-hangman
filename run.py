@@ -58,8 +58,6 @@ def instructions():
     """
     print("\nThe computer will generate a random word,\n"
           "you then have 6 lives to guess each letter correctly.\n"
-          "\nThe main objective of this game is to guess the word "
-          "\nby choosing the correct letters, one at a time.\n"
           "\n1. To guess the word, type a letter of your choice "
           "\nthen press the enter key. \n"
           "\n2. If your selection is correct "
@@ -181,6 +179,7 @@ def another_game():
     yes/no\n').lower()
 
         if play_again == 'yes':
+            clear()
             main_game()
         elif play_again == 'no':
             print('Game over ! Press "Run Program" if you want to play again')
