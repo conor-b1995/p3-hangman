@@ -17,11 +17,6 @@ def start_screen():
     print('*' * 25)
     time.sleep(1)
 
-#     print('The computer will generate a random word,\n\
-# you then have 6 attempts to guess each letter correctly \n\
-# or else an innocent man dies !!')
-    # time.sleep(3)
-
     while True:
         name = input('\nPlease enter your first name here: \n')
 
