@@ -1,7 +1,7 @@
-import os
-import time
-import random
-from words import random_words
+import os  # used for clearing the terminal
+import time  # used for leaving a pause in the terminal
+import random  # used for making a random choice
+from words import random_words  # list of random words imported
 
 
 def start_screen():
