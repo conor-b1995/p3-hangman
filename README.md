@@ -82,6 +82,8 @@ The following steps were taken to deploy this project:
 11. When the project has been successfully deployed (this may take a few minutes), click on the 'view' button, which will appear on the screen. When clicked, it will open the deployed application.
 
 ## Credits
+* Thanks to [Code Institute](https://codeinstitute.net/ie/) for the terminal in which this project runs and for the 'Love Sandwiches' walkthrough which helped a lot as I have no previous experience with Python. 
 * The idea for the function to clear the terminal came from [101computing.net](https://www.101computing.net/python-typing-text-effect/).
-* The structure for the hangman figure came from the [Kite youtube channel](https://www.youtube.com/watch?v=m4nEnsavl6w).
-* I got help with a couple of the functions from the [freeCodeCamp.org youtube channek](https://www.youtube.com/watch?v=8ext9G7xspg&t=1701s).
+* The structure for the hangman figure came from the [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w) youtube channel.
+* I got help with a couple of the functions from the [freeCodeCamp.org](https://www.youtube.com/watch?v=8ext9G7xspg&t=1701s) youtube channel.
+* Big thanks to everyone at Code Institute between the staff and students.
