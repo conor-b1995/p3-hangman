@@ -9,10 +9,12 @@ My version of the game allows only one user at a time to play. The computer will
 * A nice welcome screen which lets the user interact with the game immediately.
 * The game menu is very clear and user-friendly.
 * The instructions are easily read and easily understood by the user.
+* There is a good flow to the application.
 * The game itself is very clear and easy to interact with.
+* To be given the oppurtunity to play another round of the game.
 
 ## Flowchart
-The flowchart was created on [Lucid Chart](https://www.lucidchart.com/pages/). The flow chart was created to give me a rough idea of how I wanted the program to flow from start to finish.
+The flowchart was created on [Lucid Chart](https://www.lucidchart.com/pages/). It was created to give me a rough idea and outline of how I wanted the program to flow from start to finish.
 
 The flow chart shows these stages of the process:
 * The user inputs their first name and the program validates the data.
@@ -24,7 +26,7 @@ The flow chart shows these stages of the process:
 ## Features
 ### Start Screen
 * The start screen welcomes the user to the game.
-* It also lets the user input their first name and the game wishes the user good luck
+* It also lets the user input their first name and the game wishes the user good luck.
 ![Start screen](images/start_screen.jpg)
 ### Main menu
 * The main menu allows the user to check out the instructions for the game by inputting the corresponding number.
@@ -49,11 +51,11 @@ The flow chart shows these stages of the process:
 
 ### Future Features
 * A possible future idea is to make it two player, so player one can type in any word of their choice the word will then be hidden and player two will have to guess the word.
-* Making the game different levels so a group of easy words, medium words and hard words to accommodate all skill levels. 
+* Making the game into different levels so a group of easy words, medium words and hard words to accommodate all skill levels. 
 * Adding a timer to the game to make it more difficult. 
 
 ## Testing
-* Throughout my project I used the gitpod terminal to run and test that each function was working correctly as I was creating the functions.
+* Throughout my project I used the gitpod terminal to run and test that each function was working correctly as I created them.
 * I got some of my friends to test the game to make sure the game was running smoothly. Although the game ran smoothly for them they found a lot of the words very tricky so I changed my list.
 ### Validator testing
 * I ran my code through the [PEP8 Validator](http://pep8online.com/) with no issues.
