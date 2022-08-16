@@ -2,6 +2,9 @@
 Traditionally hangman is a guessing game for two or more players. One player thinks of a word or phrase and the other(s) tries to guess it by suggesting letters within a certain number of guesses.
 
 My version of the game allows only one user at a time to play. The computer will randomly pick a word from a predefined list of words. The random word will then be displayed with '_' for each letter in the random word. Then the user can try to guess the word by inputting letters, if the letter is wrong a visual of the hangman man will start to appear, if the letter is in the word the letter appears and another guess can be made. The user can keep guessing letters until either all 6 lives are used or the user has successfully guessed all the correct letters. The aim is to supply a fun word guessing game to the user.
+
+[Link to deployed game.](https://p3-hangman.herokuapp.com/)
+
 ![Responsive image](images/responsive.jpg)
 
 ## User Experience(UX)
