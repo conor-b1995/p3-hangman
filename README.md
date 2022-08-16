@@ -11,6 +11,16 @@ My version of the game allows only one user at a time to play. The computer will
 * The instructions are easily read and easily understood by the user.
 * The game itself is very clear and easy to interact with.
 
+## Flowchart
+The flowchart was created on [Lucid Chart](https://www.lucidchart.com/pages/). The flow chart was created to give me a rough idea of how I wanted the program to flow from start to finish.
+
+The flow chart shows these stages of the process:
+* The user inputs their first name and the program validates the data.
+* Give the user the option to read the instructions or go straight to the game.
+* The user then inputs a letter, the program validates the input and starts displaying the information for the user.
+* User is given the opportunity to play again or exit the game.
+![Flowchart](images/lucid_chart.jpg)
+
 ## Features
 ### Start Screen
 * The start screen welcomes the user to the game.
