@@ -117,7 +117,6 @@ def main_game():
         display_answer_grid = [
             letter if letter in guessed_letters else '_' for letter in word]
 
-        # print('\nLetters guessed: ', ','.join(guessed_letters))
         print(hangman_figure(lives))
         print(f'{lives} live(s) remaining !\n')
         print('Current word: ', " ".join(display_answer_grid))
@@ -141,7 +140,6 @@ def main_game():
         elif player_guess not in word:
             print(f'{player_guess} is not in the word')
             lives -= 1
-            # print(f'{lives} lives remaining')
             guessed_letters.append(player_guess)
             print('You have used these letters: ', ','.join(guessed_letters))
 
